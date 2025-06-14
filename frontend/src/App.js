@@ -1,15 +1,27 @@
-
+// src/App.js
 import './App.css';
-
-// frontend/src/App.js
+import 'bootstrap/dist/css/bootstrap.min.css';
 import TaskList from './components/TaskList';
+import { FaClipboardList } from 'react-icons/fa';
 
 function App() {
   return (
-    <div className="container mt-4">
-      <h1>Mi Agenda Universitaria</h1>
-      <TaskList /> {/* Componente que lista tareas */}
-    </div>
+    <>
+      {/* Barra de navegación */}
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div className="container">
+          <span className="navbar-brand d-flex align-items-center">
+            <FaClipboardList className="me-2" />
+            Mi Agenda Universitaria
+          </span>
+        </div>
+      </nav>
+
+      {/* Contenido principal */}
+      <main className="container py-4">
+        <TaskList />
+      </main>
+    </>
   );
 }
 
